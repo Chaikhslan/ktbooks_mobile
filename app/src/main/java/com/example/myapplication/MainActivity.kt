@@ -2,12 +2,8 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.fragment.app.Fragment
-import com.example.myapplication.ui.CategoryFragment
-import com.example.myapplication.ui.FavoriteFragment
-import com.example.myapplication.ui.ProductFragment
-import com.example.myapplication.ui.UserFragment
+import com.example.myapplication.ui.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,34 +14,38 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun bottomNavMenu() {
-        bottom_nav_menu.setOnNavigationItemReselectedListener { menuItem ->
+        bottom_nav_menu.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.product_unit -> {
                     loadFragment(ProductFragment())
-                    return@setOnNavigationItemReselectedListener
+                    return@setOnNavigationItemSelectedListener true
                 }
                 R.id.category -> {
                     loadFragment(CategoryFragment())
-                    return@setOnNavigationItemReselectedListener
+                    return@setOnNavigationItemSelectedListener true
                 }
                 R.id.favorite -> {
                     loadFragment(FavoriteFragment())
-                    return@setOnNavigationItemReselectedListener
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.search -> {
+                    loadFragment(SearchFragment())
+                    return@setOnNavigationItemSelectedListener true
                 }
                 R.id.user -> {
                     loadFragment(UserFragment())
-                    return@setOnNavigationItemReselectedListener
-                } else -> {
-                    return@setOnNavigationItemReselectedListener
+                    return@setOnNavigationItemSelectedListener true
+                }
+                else -> {
+                    return@setOnNavigationItemSelectedListener false
                 }
             }
         }
     }
 
-    private fun loadFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().also { fragmentTransaction ->
-            fragmentTransaction.replace(R.id.fragmentTransaction, fragment)
-            fragmentTransaction.commit()
-        }
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentTransaction, fragment)
+            .commit()
     }
 }

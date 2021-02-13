@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="user_photo_width">150dp</dimen>
+    <dimen name="user_photo_height">150dp</dimen>
+    <dimen name="user_marginTop">100dp</dimen>
+    <dimen name="user_button_marginTop">15dp</dimen>
+</resources>
