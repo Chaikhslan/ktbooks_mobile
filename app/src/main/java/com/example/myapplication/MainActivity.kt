@@ -2,6 +2,8 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
 import androidx.fragment.app.Fragment
 import com.example.myapplication.ui.*
 import kotlinx.android.synthetic.main.activity_main.*
