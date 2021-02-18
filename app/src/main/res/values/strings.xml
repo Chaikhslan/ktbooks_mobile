@@ -4,5 +4,4 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="user_add_photo">add photo</string>
     <string name="user_input_button">Вход или регистрация</string>
-    <string name="app_name">KTBOOKS</string>
 </resources>

@@ -6,4 +6,6 @@
     <dimen name="user_button_marginTop">15dp</dimen>
     <dimen name="margin_toolbar">10dp</dimen>
     <dimen name="app_name_size">16sp</dimen>
+    <dimen name="layout_margin_normal">12dp</dimen>
+    <dimen name="layout_margin_large">14dp</dimen>
 </resources>
