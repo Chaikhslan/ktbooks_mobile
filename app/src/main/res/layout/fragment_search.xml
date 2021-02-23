@@ -6,7 +6,7 @@
     android:background="@color/orange"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.SearchFragment">
+    tools:context=".ui.search.SearchFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_menu"
